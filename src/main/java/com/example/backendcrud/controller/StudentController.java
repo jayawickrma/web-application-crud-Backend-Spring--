@@ -21,6 +21,12 @@ public class StudentController{
         return null;
     }
 
-    //@PostMapping("/addPost")
-   // public Student saveStudent(@RequestBody Student student)
+    @PostMapping("/savestudent")
+    public Student saveStudent(@RequestBody Student student){return studentRepository.save(student);}
+
+    @PutMapping("/updatestudent")
+    public Student updateStudent(@RequestBody Student student){return studentRepository.save(student);}
+
+    @DeleteMapping("/deletestudent")
+    public Student deleteStudent(@RequestBody Student student){return studentRepository.save(student);}
 }
